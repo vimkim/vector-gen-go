@@ -36,3 +36,9 @@ gen-1536-150000:
 
 gen-1536-300000:
     go run . --seed 0 --rows 300000 --dim 1536 --output data/vector_1536dim_300000row_seed0.fvecs
+
+verify-data:
+    sha256sum -c directory_snapshot.txt
+
+create-checksum:
+    fd . ./data | sort | xargs sha256sum > directory_snapshot.txt
