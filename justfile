@@ -19,6 +19,8 @@ gen-256-150000:
 gen-256-300000:
     go run . --seed 0 --rows 300000 --dim 256 --output data/vector_256dim_300000row_seed0.fvecs
 
+gen-768-all: gen-768-75000 gen-768-150000 gen-768-300000
+
 gen-768-75000:
     go run . --seed 0 --rows 75000 --dim 768 --output data/vector_768dim_75000row_seed0.fvecs
 
